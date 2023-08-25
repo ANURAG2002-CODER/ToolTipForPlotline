@@ -23,9 +23,13 @@ This project is a frontend app that renders a tooltip with dynamic positioning, 
 
 ## Video Demonstartion
 <video width="640" height="360" controls>
-  <source src="./ToolTipDemo.mov" type="video/mp4">
-  Your browser does not support the video tag.
+  <source src="https://youtu.be/2UdlX7NqRJg" type="video/mp4">
 </video> 
+
+If the video doesn't play open the link below.
+
+>>https://www.youtube.com/watch?v=2UdlX7NqRJg
+
 ## ✨ Contributors
 
 <table>
