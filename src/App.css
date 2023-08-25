@@ -3,6 +3,9 @@
   padding: 20px;
 }
 
+.tooltip-content {
+  z-index: 999;
+}
 .mobile-container {
   position: relative;
   border-radius: 20px;
@@ -28,6 +31,11 @@
   position: relative;
   margin:auto;
   /* overflow: hidden; */
+}
+
+.tooltip-image img {
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .tooltip-form-container {

@@ -4,6 +4,7 @@ import "./TooltipForm.css";
 const TooltipForm = ({ buttons, onSubmit }) => {
   const [selectedButton, setSelectedButton] = useState("");
   const [tooltipText, setTooltipText] = useState("");
+  const [tooltipImage, setTooltipImage] = useState(null);
   const [textSize, setTextSize] = useState("");
   const [color, setColor] = useState("");
   const [padding, setPadding] = useState("");
@@ -18,6 +19,7 @@ const TooltipForm = ({ buttons, onSubmit }) => {
 
     const tooltipData = {
       tooltipText,
+      tooltipImage,
       textSize,
       color,
       padding,
@@ -34,6 +36,18 @@ const TooltipForm = ({ buttons, onSubmit }) => {
   const handleTooltipTextChange = (event) => {
     setTooltipText(event.target.value);
   };
+
+  const handleImageUpload = (event) => {
+    const file = event.target.files[0];
+    if (file) {
+      setTooltipImage(URL.createObjectURL(file));
+    }
+  };
+
+  const handleImageRemove = () => {
+    setTooltipImage(null);
+  };
+
   return (
     <div className="tooltip-form-container">
       <form className="tooltip-form" onSubmit={handleSubmit}>
@@ -70,6 +84,22 @@ const TooltipForm = ({ buttons, onSubmit }) => {
                   value={tooltipText}
                   onChange={handleTooltipTextChange}
                 />
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Tooltip Image: </td>
+              <td>
+                <input
+                  type="file"
+                  id="tooltipImage"
+                  onChange={handleImageUpload}
+                />
+                <button type="button" onClick={handleImageRemove}>
+                  Remove Image
+                </button>
               </td>
             </tr>
             <tr>

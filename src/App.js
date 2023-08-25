@@ -76,7 +76,7 @@ function App() {
       <h1>Tooltip App</h1>
       <div className="flex-container">
         <TooltipForm buttons={buttons} onSubmit={handleTooltipSubmit} />
-        <div className="container">
+        <div className="container" style={{ zIndex: 1 }}>
           <div className="outer-box">
             <div className="mobile-container">
               <div className="top-left">

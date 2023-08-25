@@ -5,6 +5,7 @@ import "./App.css";
 const Tooltip = ({
   target,
   textSize,
+  tooltipImage,
   color,
   padding,
   backgroundColor,
@@ -27,6 +28,7 @@ const Tooltip = ({
   const tooltipStyle = {
     position: "relative",
     display: "inline-block",
+    zIndex: 999,
   };
 
   const arrowStyle = {
@@ -67,6 +69,11 @@ const Tooltip = ({
       {visible && (
         <div className="tooltip-content" style={tooltipContentStyle}>
           <div className="arrow" style={arrowStyle}></div>
+          {tooltipImage && (
+            <div className="tooltip-image">
+              <img src={tooltipImage} alt="Tooltip" />
+            </div>
+          )}
           {text}
         </div>
       )}
