@@ -1,0 +1,47 @@
+.tooltip-form-container {
+    background-color: lightgrey;
+    border-radius: 8px;
+    padding: 20px;
+    margin: auto;
+    width: 600px;
+  }
+  
+  .tooltip-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .form-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .form-label {
+    width: 150px;
+    font-weight: normal;
+  }
+  
+  .form-select,
+  .form-input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 70%; /* Add this line to ensure uniform width */
+  }
+  
+  .form-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .form-button:hover {
+    background-color: #0056b3;
+  }
+  
